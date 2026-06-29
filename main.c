@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "names.h"
 
 int main(void) {
     char tabuleiro[3][3], player;
