@@ -5,7 +5,7 @@ int main(void) {
     char tabuleiro[3][3], player;
     int linha, coluna, jogadaValida, estadoJogo = 1; // 1 ativo, 0 inativo
 
-    printf("Player 1 - x, Player 2 - O\n\n");
+    printf("Player 1 - X, Player 2 - O\n\n");
 
     // Criar tabuleiro
     inicializar(tabuleiro);
@@ -17,13 +17,13 @@ int main(void) {
         // Realizar a jogada
         do {
             printf("Vez de player %c\n", player);
-            printf("Digite a linha e coluna de 0-2 para jogar: ");
+            printf("Digite a linha e coluna de 0-2 para jogar: \n");
             scanf("%d %d", &linha, &coluna);
 
             jogadaValida = realizarJogada(tabuleiro, linha, coluna, player);
 
             if (!jogadaValida) {
-                printf("Posicao invalida! Digite novamente.");
+                printf("Posicao invalida! Digite novamente.\n\n");
             }
         } while (!jogadaValida);
 
