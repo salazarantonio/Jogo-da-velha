@@ -10,9 +10,9 @@ O objetivo principal foi aplicar na prática os conceitos de programação estru
 
 ## 🚀 Fases do Projeto
 
-* **Fase 1** — Jogo entre dois jogadores locais pelo teclado — ✅ Concluída ([`1x1`](./1x1))
-* **Fase 2** — Jogo local contra Inteligência Artificial — ✅ Concluída ([`Offline`](./Offline))
-* **Fase 3** — Jogo entre dois jogadores via servidor — ⏳ Pendente
+* **Fase 1** — Jogo entre dois jogadores locais pelo teclado — ([`1x1`](./1x1))
+* **Fase 2** — Jogo local contra Inteligência Artificial — ([`Offline`](./Offline))
+* **Fase 3** — Jogo entre dois jogadores via servidor — Pendente
 
 ## 🛠️ Tecnologias Utilizadas
 
