@@ -1,26 +1,28 @@
 #include <stdio.h>
-#include "names.h"
+#include "def.h"
 
 int main(void) {
-    char tabuleiro[3][3], player;
-    int linha, coluna, jogadaValida, estadoJogo = 1; // 1 ativo, 0 inativo
+    int tabuleiro[3][3], player, vencedor, linha, coluna, jogadaValida, estadoJogo = 1; // 1 ativo, 0 inativo
 
-    printf("Player 1 - X, Player 2 - O\n\n");
+    printf("Voce e' o jogador 1 - X.");
 
     // Criar tabuleiro
     inicializar(tabuleiro);
-    player = 'X';
+    player = 4;
 
     while (estadoJogo) {
         mostrarT(tabuleiro);
-
         // Realizar a jogada
         do {
-            printf("Vez de player %c\n", player);
-            printf("Digite a linha e coluna de 0-2 para jogar: \n");
-            scanf("%d %d", &linha, &coluna);
-
-            jogadaValida = realizarJogada(tabuleiro, linha, coluna, player);
+            if (player == 4) {
+                printf("Vez de player %c\n", player == 4 ? 'X' : 'O');
+                printf("Digite a linha e coluna de 0-2 para jogar: \n");
+                scanf("%d %d", &linha, &coluna);
+                jogadaValida = realizarJogada(tabuleiro, linha, coluna, player);
+            }
+            else {
+                jogadaValida = jogadaIA(tabuleiro, player);
+            }
 
             if (!jogadaValida) {
                 printf("Posicao invalida! Digite novamente.\n\n");
@@ -28,9 +30,10 @@ int main(void) {
         } while (!jogadaValida);
 
         // Verificar se o jogador venceu
-        if (vitoria(tabuleiro, player)) {
+        vencedor = vitoria(tabuleiro);
+        if (vencedor) {
             mostrarT(tabuleiro);
-            printf("Jogador %c venceu!\n", player);
+            printf("Jogador %c venceu!\n", vencedor == 1 ? 'O' : 'X');
             // Encerrar
             estadoJogo = 0;
         }
@@ -43,9 +46,7 @@ int main(void) {
             estadoJogo = 0;
         }
 
-        // Trocar player
         player = trocarP(player);
-        
     }
     return 0;
 }

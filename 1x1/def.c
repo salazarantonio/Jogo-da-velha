@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "names.h"
+#include "def.h"
 
 void inicializar(char tabuleiro[3][3]) {
     for (int i = 0; i < 3; i++) {
