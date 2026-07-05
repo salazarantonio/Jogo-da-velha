@@ -10,9 +10,9 @@ O objetivo principal foi aplicar na prática os conceitos de programação estru
 
 ## 🚀 Fases do Projeto
 
-* **Fase 1** — Jogo entre dois jogadores locais pelo teclado
-* **Fase 2** — Jogo local contra Inteligência Artificial
-* **Fase 3** — Jogo entre dois jogadores via servidor
+* **Fase 1** — Jogo entre dois jogadores locais pelo teclado — ✅ Concluída ([`1x1`](./1x1))
+* **Fase 2** — Jogo local contra Inteligência Artificial — ✅ Concluída ([`Offline`](./Offline))
+* **Fase 3** — Jogo entre dois jogadores via servidor — ⏳ Pendente
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -30,24 +30,26 @@ Este projeto foi construído colaborativamente por:
 Siga os passos abaixo para rodar o jogo localmente:
 
 1. Clone este repositório:
-   ```bash
+```bash
    git clone https://github.com/salazarantonio/Jogo-da-velha.git
-   ```
+```
 
-2. Acesse a pasta do projeto:
-   ```bash
-   cd Jogo-da-velha
-   ```
+2. Acesse a pasta da fase que deseja executar:
+```bash
+   cd Jogo-da-velha/1x1       # Fase 1 - dois jogadores
+   # ou
+   cd Jogo-da-velha/Offline   # Fase 2 - contra a IA
+```
 
 3. Compile o projeto:
-   ```bash
+```bash
    gcc main.c def.c -o jogo
-   ```
+```
 
 4. Execute o jogo:
-   ```bash
+```bash
    ./jogo
-   ```
+```
 
 ---
 
